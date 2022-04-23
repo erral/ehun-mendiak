@@ -2,7 +2,7 @@
   "name": "ehun-mendi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://erral.github.io/ehun-mendiak",
+  "homepage": ".",
   "dependencies": {
     "@formatjs/cli": "^4.8.3",
     "@reduxjs/toolkit": "^1.8.1",
@@ -26,6 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "i18n": "formatjs extract 'src/**/!(*.d).{js,jsx,react}' --out-file src/locales/base.json --format simple && node i18n-sync.js",
