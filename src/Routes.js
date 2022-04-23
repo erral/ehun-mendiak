@@ -8,7 +8,7 @@ export const AppRoutes = () => {
     <BrowserRouter>
       <Routes path="/">
         <Route index element={<FrontPage />} />
-        <Route path="/mapa" element={<MapPage />} />
+        <Route exact path="/mapa" element={<MapPage />} />
       </Routes>
     </BrowserRouter>
   );
