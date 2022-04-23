@@ -7,14 +7,13 @@ import {
   ButtonGroup,
   Button,
   Navbar,
-  Nav,
 } from 'react-bootstrap';
 import { getMountains } from '../../store/actions';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { BoxArrowUpRight } from 'react-bootstrap-icons';
-import { Link } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export const FrontPage = () => {
   const dispatch = useDispatch();
@@ -37,9 +36,9 @@ export const FrontPage = () => {
             <FormattedMessage id="Year" defaultMessage="Year" />
           </Navbar.Brand>
           {Object.keys(mountains).map((year) => (
-            <Link to={`/#year${year}`} className="nav-link">
+            <AnchorLink href={`/#year${year}`} className="nav-link">
               {year}
-            </Link>
+            </AnchorLink>
           ))}
         </Navbar>
 
