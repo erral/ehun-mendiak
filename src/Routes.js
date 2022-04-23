@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { FrontPage } from "./pages/FrontPage/FrontPage";
-import { MapPage } from "./pages/MapPage/MapPage";
+import { FrontPage } from './pages/FrontPage/FrontPage';
+import { MapPage } from './pages/MapPage/MapPage';
 
 export const AppRoutes = () => {
   return (

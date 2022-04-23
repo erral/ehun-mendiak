@@ -1,9 +1,9 @@
-import { Row, Col, Container } from "react-bootstrap";
-import { Menu } from "../Menu/Menu";
+import { Row, Col, Container } from 'react-bootstrap';
+import { Menu } from '../Menu/Menu';
 
 const AppContainer = ({
-  bgColor = "blue" || "dark" || "light",
-  className = "",
+  bgColor = 'blue' || 'dark' || 'light',
+  className = '',
   animate = false,
   children,
 }) => {
@@ -15,8 +15,8 @@ const AppContainer = ({
           <div
             className={`app-container app-bg-${bgColor} ${
               animate
-                ? "animate__animated animate__slideInUp animate__faster"
-                : ""
+                ? 'animate__animated animate__slideInUp animate__faster'
+                : ''
             }`}
           >
             {children}

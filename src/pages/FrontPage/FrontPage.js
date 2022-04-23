@@ -1,4 +1,4 @@
-import { AppContainer } from "../../components";
+import { AppContainer } from '../../components';
 import {
   Row,
   Col,
@@ -8,13 +8,13 @@ import {
   Button,
   Navbar,
   Nav,
-} from "react-bootstrap";
-import { getMountains } from "../../store/actions";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { FormattedMessage } from "react-intl";
-import { BoxArrowUpRight } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+} from 'react-bootstrap';
+import { getMountains } from '../../store/actions';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 
 export const FrontPage = () => {
   const dispatch = useDispatch();
@@ -55,11 +55,11 @@ export const FrontPage = () => {
                       <Card.Text>
                         <ul>
                           <li>
-                            <FormattedMessage id="Altuera" />:{" "}
+                            <FormattedMessage id="Altuera" />:{' '}
                             {mountain.Altuera}
                           </li>
                           <li>
-                            <FormattedMessage id="Lurraldea" />:{" "}
+                            <FormattedMessage id="Lurraldea" />:{' '}
                             {mountain.Lurraldea}
                           </li>
                           <li>
@@ -67,7 +67,7 @@ export const FrontPage = () => {
                           </li>
                         </ul>
                         <ButtonGroup>
-                          <Button href={mountain["mendiak.eus"]}>
+                          <Button href={mountain['mendiak.eus']}>
                             mendiak.eus <BoxArrowUpRight />
                           </Button>
                           <Button variant="secondary" href={mountain.mendikat}>

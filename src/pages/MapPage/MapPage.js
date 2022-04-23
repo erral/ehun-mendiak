@@ -1,8 +1,8 @@
-import { AppContainer } from "../../components";
-import { Container } from "react-bootstrap";
-import { getMountains } from "../../store/actions";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { AppContainer } from '../../components';
+import { Container } from 'react-bootstrap';
+import { getMountains } from '../../store/actions';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import {
   MapContainer,
@@ -10,12 +10,12 @@ import {
   Popup,
   TileLayer,
   Polyline,
-} from "react-leaflet";
-import { FormattedMessage } from "react-intl";
+} from 'react-leaflet';
+import { FormattedMessage } from 'react-intl';
 
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-import L from "leaflet";
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import L from 'leaflet';
 let DefaultIcon = L.icon({
   iconUrl: icon,
   shadowUrl: iconShadow,
@@ -26,7 +26,7 @@ export const MapPage = () => {
   dispatch(getMountains());
   const mountains = useSelector((state) => state.mountains?.data);
   const border = useSelector((state) => state.border?.data);
-  const borderOptions = { color: "#3381c2" };
+  const borderOptions = { color: '#3381c2' };
   const bounds = mountains.map((mountain) => {
     return [
       parseFloat(mountain.mendikat_latitude),

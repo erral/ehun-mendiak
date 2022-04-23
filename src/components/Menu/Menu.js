@@ -1,6 +1,6 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (

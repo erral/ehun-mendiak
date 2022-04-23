@@ -1,9 +1,9 @@
 //import "./App.css";
-import { AppRoutes } from "./Routes";
-import messages_eu from "./locales/eu/eu.json";
-import { IntlProvider } from "react-intl";
+import { AppRoutes } from './Routes';
+import messages_eu from './locales/eu/eu.json';
+import { IntlProvider } from 'react-intl';
 
-import "./App.scss";
+import './App.scss';
 const messages = {
   eu: messages_eu,
 };

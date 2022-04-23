@@ -2,7 +2,7 @@ import {
   GET_MOUNTAINS_ERROR,
   GET_MOUNTAINS_PENDING,
   GET_MOUNTAINS_SUCCESS,
-} from "../actions/mountain-data";
+} from '../actions/mountain-data';
 
 const initialState = {
   loading: false,

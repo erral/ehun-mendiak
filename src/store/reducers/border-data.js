@@ -2,7 +2,7 @@ import {
   GET_BORDER_ERROR,
   GET_BORDER_PENDING,
   GET_BORDER_SUCCESS,
-} from "../actions/border-data";
+} from '../actions/border-data';
 
 const initialState = {
   loading: false,
