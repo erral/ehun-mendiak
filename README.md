@@ -52,3 +52,13 @@ Oso gauza gutxi dakit React-i buruz. Momenuz _Copy-paste based development_ tekn
 ## Lizentzia
 
 GNU GPLv3.0 lizentziapean banatzen da kode hau.
+
+## Datuak, datuak, datuak!
+
+Nire mendi-igoera guztiak [mendiak.eus](https://mendiak.eus/erabiltzailea/mikel-larreategi/) aplikazioa erabiliz gordetzen ditut.
+
+Handik datuak atera eta eskuz [orrialde hau](https://erral.freemyip.com/mendiak.html) mantentzen dut, argazki eta bestelako datuekin.
+
+Handik datuak eskuz erauzi eta python script bat erabiliz mendien [Mendikat](https://mendikat.net)eko datuak erauzten ditut aplikazio honen [datuen iturburua lortzeko](./src/api/mendiak_processed.json).
+
+Egunen baten mendiak.eus-en APIa jartzen dugunean, harekin aterako ditut datuak.
