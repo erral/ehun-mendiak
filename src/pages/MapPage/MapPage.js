@@ -28,12 +28,7 @@ export const MapPage = () => {
   const mountains = useSelector((state) => state.mountains?.data);
   const border = useSelector((state) => state.border?.data);
   const borderOptions = { color: '#3381c2' };
-  const bounds = mountains.map((mountain) => {
-    return [
-      parseFloat(mountain.mendikat_latitude),
-      parseFloat(mountain.mendikat_longitude),
-    ];
-  });
+
   return (
     <AppContainer>
       <Container>
