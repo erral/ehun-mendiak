@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Nire 100 Mendiak
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[100 Mendien Lehiaketa](https://emf.eus/Centenarios) Euskal Mendizale Federakuntzaren _lehiaketa_ bat da, historia handiko lehiaketa hain zuzen ere.
 
-## Available Scripts
+Helburua Euskal Herriko eta inguruetako mendiak ezagutzea eta igotzea da, baina era lasaian eta mendizaletasuna sustatuz. Hau da, helburua ez da 100 mendi ahalik eta azkarren igotzea, hori egitean mendiaz disfrutatzea baino. Horregatik arau erraz batzuk ditu lehiaketa honek:
 
-In the project directory, you can run:
+- Mendiak Federazioak ezarritakoen artekoak izan behar dira
+- Urtean 20 mendi bakarrik kontatu ditzakezu (bigarren mendeurrenetik aurrera, urtean 25 kontatu ditzakezu)
+- Egun bakoitzean mendi bakarra kontatu dezakezu
+- Mendeurren bakoitzean mendi bakoitza behin bakarrik igo dezakezu. Beste mendeurren baten aurretik igota duzun mendi bat igo nahi baduzu beste bide batetik igo behar duzu.
 
-### `npm start`
+2017-2021 urte artean lehenengo mendeurrena osatu dut eta 2022an bigarrenarekin hasi naiz.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Bide batez [react](https://reactjs.org/) ikasteko aprobetxatuko dut eta horrela nire 100 mendien igoerekin react app txorra bat egingo dut gauzak erakusteko.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Momentuz hemen dago kodea eta egin dudana ikusteko erabili esteka hau: https://erral.github.io/ehun-mendiak/
 
-### `npm test`
+## Martxan jartzeko eta garatzeko beharrezkoak
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Instalatu [nvm](https://github.com/nvm-sh/nvm) node bertsioekin zoratu nahi ez baduzu.
+2. Instalatu erabili beharreko node bertsioa:
 
-### `npm run build`
+```bash
+nvm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Aktibatu node bertsioa:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+nvm use
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Instalatu dependentziak:
 
-### `npm run eject`
+```bash
+npm install -g yarn
+yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Hasi garapen zerbitzaria:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+yarn start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+GitHub repo hau bertara egiten diren push guztiak automatikoki eraiki eta emaitzak https://erral.github.io/ehun-mendiak/ helbidean argitaratzeko konfiguratuta dago.
 
-## Learn More
+## Disclaimer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Oso gauza gutxi dakit React-i buruz. Momenuz _Copy-paste based development_ teknika erabili dut garatzeko.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Lizentzia
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GNU GPLv3.0 lizentziapean banatzen da kode hau.
