@@ -1,9 +1,20 @@
 import { AppContainer } from "../../components";
-import { Row, Col, Container, Card, Button } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Container,
+  Card,
+  ButtonGroup,
+  Button,
+  Navbar,
+  Nav,
+} from "react-bootstrap";
 import { getMountains } from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { FormattedMessage } from "react-intl";
+import { BoxArrowUpRight } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 export const FrontPage = () => {
   const dispatch = useDispatch();
@@ -20,13 +31,24 @@ export const FrontPage = () => {
   }
   return (
     <AppContainer>
-      <Container fluid="md">
-        <Row>
+      <Container fluid>
+        <Navbar>
+          <Navbar.Brand>
+            <FormattedMessage id="Year" />
+          </Navbar.Brand>
           {Object.keys(mountains).map((year) => (
-            <Col sm>
-              <>
-                <h2> {year}</h2>
-                {mountains[year].map((mountain) => (
+            <Link to={`/#year${year}`} className="nav-link">
+              {year}
+            </Link>
+          ))}
+        </Navbar>
+
+        {Object.keys(mountains).map((year) => (
+          <Row>
+            <>
+              <h2 id={`#year${year}`}> {year}</h2>
+              {mountains[year].map((mountain) => (
+                <Col>
                   <Card>
                     <Card.Body>
                       <Card.Title>{mountain.Mendia}</Card.Title>
@@ -40,24 +62,26 @@ export const FrontPage = () => {
                             <FormattedMessage id="Lurraldea" />:{" "}
                             {mountain.Lurraldea}
                           </li>
+                          <li>
+                            <FormattedMessage id="Data" />: {mountain.Eguna}
+                          </li>
                         </ul>
-                        <Button
-                          variant="primary"
-                          href={mountain["mendiak.eus"]}
-                        >
-                          mendiak.eus
-                        </Button>
-                        <Button variant="primary" href={mountain.mendikat}>
-                          mendikat
-                        </Button>
+                        <ButtonGroup>
+                          <Button href={mountain["mendiak.eus"]}>
+                            mendiak.eus <BoxArrowUpRight />
+                          </Button>
+                          <Button variant="secondary" href={mountain.mendikat}>
+                            mendikat <BoxArrowUpRight />
+                          </Button>
+                        </ButtonGroup>
                       </Card.Text>
                     </Card.Body>
                   </Card>
-                ))}
-              </>
-            </Col>
-          ))}
-        </Row>
+                </Col>
+              ))}
+            </>
+          </Row>
+        ))}
       </Container>
     </AppContainer>
   );
