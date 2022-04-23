@@ -2,6 +2,7 @@
   "name": "ehun-mendi",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://erral.github.io/ehun-mendiak",
   "dependencies": {
     "@formatjs/cli": "^4.8.3",
     "@reduxjs/toolkit": "^1.8.1",
