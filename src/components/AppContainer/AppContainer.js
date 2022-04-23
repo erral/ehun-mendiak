@@ -11,7 +11,7 @@ const AppContainer = ({
     <Container className={className} fluid>
       <Menu />
       <Row className="mx-0">
-        <Col className="col-6 mx-auto">
+        <Col className="mx-auto">
           <div
             className={`app-container app-bg-${bgColor} ${
               animate

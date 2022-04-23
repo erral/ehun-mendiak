@@ -1,6 +1,6 @@
 import { AppContainer } from '../../components';
-import { Container } from 'react-bootstrap';
-import { getMountains } from '../../store/actions';
+import { Container, Row, Col } from 'react-bootstrap';
+import { getMountains, getBorder } from '../../store/actions';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
@@ -24,6 +24,7 @@ let DefaultIcon = L.icon({
 export const MapPage = () => {
   const dispatch = useDispatch();
   dispatch(getMountains());
+  dispatch(getBorder());
   const mountains = useSelector((state) => state.mountains?.data);
   const border = useSelector((state) => state.border?.data);
   const borderOptions = { color: '#3381c2' };
@@ -35,34 +36,38 @@ export const MapPage = () => {
   });
   return (
     <AppContainer>
-      <Container fluid>
-        <MapContainer bounds={bounds} zoom={13} scrollWheelZoom={true}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
-          />
-          <Polyline positions={border} pathOptions={borderOptions} />
-          {mountains.map((mountain) => (
-            <Marker
-              key={mountain.Mendia}
-              icon={DefaultIcon}
-              position={[
-                parseFloat(mountain.mendikat_latitude),
-                parseFloat(mountain.mendikat_longitude),
-              ]}
-            >
-              <Popup>
-                <p>
-                  <strong>
-                    {mountain.Mendia} ({mountain.Altuera}) <br />
-                  </strong>
-                  <FormattedMessage id="Date" defaultMessage="Date" />:{' '}
-                  {mountain.Eguna}
-                </p>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+      <Container>
+        <Row>
+          <Col>
+            <MapContainer bounds={border} zoom={13} scrollWheelZoom={true}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+              />
+              <Polyline positions={border} pathOptions={borderOptions} />
+              {mountains.map((mountain) => (
+                <Marker
+                  key={mountain.Mendia}
+                  icon={DefaultIcon}
+                  position={[
+                    parseFloat(mountain.mendikat_latitude),
+                    parseFloat(mountain.mendikat_longitude),
+                  ]}
+                >
+                  <Popup>
+                    <p>
+                      <strong>
+                        {mountain.Mendia} ({mountain.Altuera}) <br />
+                      </strong>
+                      <FormattedMessage id="Date" defaultMessage="Date" />:{' '}
+                      {mountain.Eguna}
+                    </p>
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
+          </Col>
+        </Row>
       </Container>
     </AppContainer>
   );
