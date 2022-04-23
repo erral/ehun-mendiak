@@ -20,29 +20,28 @@ Momentuz hemen dago kodea eta egin dudana ikusteko erabili esteka hau: https://e
 1. Instalatu [nvm](https://github.com/nvm-sh/nvm) node bertsioekin zoratu nahi ez baduzu.
 2. Instalatu erabili beharreko node bertsioa:
 
-```bash
-nvm install
-```
+   ```bash
+   nvm install
+   ```
 
 3. Aktibatu node bertsioa:
 
-```bash
-nvm use
-```
+   ```bash
+   nvm use
+   ```
 
 4. Instalatu dependentziak:
 
-```bash
-npm install -g yarn
-yarn
+   ```bash
+   npm install -g yarn
+   yarn
+   ```
 
-```
+5. Hasi garapen zerbitzaria:
 
-4. Hasi garapen zerbitzaria:
-
-```bash
-yarn start
-```
+   ```bash
+   yarn start
+   ```
 
 GitHub repo hau bertara egiten diren push guztiak automatikoki eraiki eta emaitzak https://erral.github.io/ehun-mendiak/ helbidean argitaratzeko konfiguratuta dago.
 
