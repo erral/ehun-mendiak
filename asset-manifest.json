@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ehun-mendiak/static/css/main.a5d7ccca.css",
+    "main.js": "/ehun-mendiak/static/js/main.98449328.js",
+    "static/js/787.063faa48.chunk.js": "/ehun-mendiak/static/js/787.063faa48.chunk.js",
+    "index.html": "/ehun-mendiak/index.html",
+    "main.a5d7ccca.css.map": "/ehun-mendiak/static/css/main.a5d7ccca.css.map",
+    "main.98449328.js.map": "/ehun-mendiak/static/js/main.98449328.js.map",
+    "787.063faa48.chunk.js.map": "/ehun-mendiak/static/js/787.063faa48.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5d7ccca.css",
+    "static/js/main.98449328.js"
+  ]
+}
