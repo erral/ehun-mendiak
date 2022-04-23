@@ -34,7 +34,7 @@ export const FrontPage = () => {
       <Container fluid>
         <Navbar>
           <Navbar.Brand>
-            <FormattedMessage id="Year" />
+            <FormattedMessage id="Year" defaultMessage="Year" />
           </Navbar.Brand>
           {Object.keys(mountains).map((year) => (
             <Link to={`/#year${year}`} className="nav-link">
@@ -55,15 +55,22 @@ export const FrontPage = () => {
                       <Card.Text>
                         <ul>
                           <li>
-                            <FormattedMessage id="Altuera" />:{' '}
-                            {mountain.Altuera}
+                            <FormattedMessage
+                              id="Height"
+                              defaultMessage="Height"
+                            />
+                            : {mountain.Altuera}
                           </li>
                           <li>
-                            <FormattedMessage id="Lurraldea" />:{' '}
-                            {mountain.Lurraldea}
+                            <FormattedMessage
+                              id="Country"
+                              defaultMessage="Country"
+                            />
+                            : {mountain.Lurraldea}
                           </li>
                           <li>
-                            <FormattedMessage id="Data" />: {mountain.Eguna}
+                            <FormattedMessage id="Date" defaultMessage="Date" />
+                            : {mountain.Eguna}
                           </li>
                         </ul>
                         <ButtonGroup>

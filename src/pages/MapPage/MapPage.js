@@ -56,7 +56,8 @@ export const MapPage = () => {
                   <strong>
                     {mountain.Mendia} ({mountain.Altuera}) <br />
                   </strong>
-                  <FormattedMessage id="Data" />: {mountain.Eguna}
+                  <FormattedMessage id="Date" defaultMessage="Date" />:{' '}
+                  {mountain.Eguna}
                 </p>
               </Popup>
             </Marker>

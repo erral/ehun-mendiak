@@ -8,11 +8,11 @@ const Menu = () => {
       <Container>
         <Nav className="me-auto">
           <Link to="/" className="nav-link">
-            <FormattedMessage id="Home" />
+            <FormattedMessage id="Home" defaultMessage="Home" />
           </Link>
 
           <Link to="/mapa" className="nav-link">
-            <FormattedMessage id="Map" />
+            <FormattedMessage id="Map" defaultMessage="Map" />
           </Link>
         </Nav>
       </Container>

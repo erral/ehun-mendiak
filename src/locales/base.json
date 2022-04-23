@@ -1,1 +1,8 @@
-{}
+{
+  "Country": "Country",
+  "Date": "Date",
+  "Height": "Height",
+  "Home": "Home",
+  "Map": "Map",
+  "Year": "Year"
+}
