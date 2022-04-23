@@ -1,17 +1,19 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
         <Nav className="me-auto">
-          <Nav.Link href="/">
+          <Link to="/" className="nav-link">
             <FormattedMessage id="Home" />
-          </Nav.Link>
-          <Nav.Link href="/mapa">
+          </Link>
+
+          <Link to="/mapa" className="nav-link">
             <FormattedMessage id="Map" />
-          </Nav.Link>
+          </Link>
         </Nav>
       </Container>
     </Navbar>
