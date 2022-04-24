@@ -36,51 +36,51 @@ export const FrontPage = () => {
             <FormattedMessage id="Year" defaultMessage="Year" />
           </Navbar.Brand>
           {Object.keys(mountains).map((year) => (
-            <AnchorLink href={`/#year${year}`} className="nav-link">
+            <AnchorLink key={year} href={`/#year${year}`} className="nav-link">
               {year}
             </AnchorLink>
           ))}
         </Navbar>
 
         {Object.keys(mountains).map((year) => (
-          <Row>
+          <Row key={year}>
             <>
               <h2 id={`#year${year}`}> {year}</h2>
               {mountains[year].map((mountain) => (
-                <Col>
+                <Col key={mountain.Mendia}>
                   <Card>
                     <Card.Body>
                       <Card.Title>{mountain.Mendia}</Card.Title>
-                      <Card.Text>
-                        <ul>
-                          <li>
-                            <FormattedMessage
-                              id="Height"
-                              defaultMessage="Height"
-                            />
-                            : {mountain.Altuera}
-                          </li>
-                          <li>
-                            <FormattedMessage
-                              id="Country"
-                              defaultMessage="Country"
-                            />
-                            : {mountain.Lurraldea}
-                          </li>
-                          <li>
-                            <FormattedMessage id="Date" defaultMessage="Date" />
-                            : {mountain.Eguna}
-                          </li>
-                        </ul>
-                        <ButtonGroup>
-                          <Button href={mountain['mendiak.eus']}>
-                            mendiak.eus <BoxArrowUpRight />
-                          </Button>
-                          <Button variant="secondary" href={mountain.mendikat}>
-                            mendikat <BoxArrowUpRight />
-                          </Button>
-                        </ButtonGroup>
-                      </Card.Text>
+
+                      <ul>
+                        <li>
+                          <FormattedMessage
+                            id="Height"
+                            defaultMessage="Height"
+                          />
+                          : {mountain.Altuera}
+                        </li>
+                        <li>
+                          <FormattedMessage
+                            id="Country"
+                            defaultMessage="Country"
+                          />
+                          : {mountain.Lurraldea}
+                        </li>
+                        <li>
+                          <FormattedMessage id="Date" defaultMessage="Date" />:{' '}
+                          {mountain.Eguna}
+                        </li>
+                      </ul>
+
+                      <ButtonGroup>
+                        <Button href={mountain['mendiak.eus']}>
+                          mendiak.eus <BoxArrowUpRight />
+                        </Button>
+                        <Button variant="secondary" href={mountain.mendikat}>
+                          mendikat <BoxArrowUpRight />
+                        </Button>
+                      </ButtonGroup>
                     </Card.Body>
                   </Card>
                 </Col>
