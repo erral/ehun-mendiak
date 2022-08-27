@@ -36,8 +36,8 @@ export const MapPage = () => {
           <Col>
             <MapContainer bounds={border} zoom={13} scrollWheelZoom={true}>
               <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Mapa https://www.openstreetmap.bzh/fr/'
+                url="https://tile.openstreetmap.bzh/eu//{z}/{x}/{y}.png"
               />
               <Polyline positions={border} pathOptions={borderOptions} />
               {mountains.map((mountain) => (
